@@ -6,102 +6,41 @@ Ubicación: España
 
 ---
 
-## 1. Introducción
+## Objetivo
 
-Una Infraestructura de Clave Pública (PKI) empresarial no es un servicio accesorio.
-Es un componente estructural de la arquitectura de seguridad de la organización.
+Este repositorio documenta principios de diseño, patrones arquitectónicos y criterios técnicos para la construcción de Infraestructuras de Clave Pública (PKI) en entornos empresariales.
 
-Cuando está mal diseñada, genera deuda criptográfica.
-Cuando está bien definida, se convierte en un habilitador de confianza transversal.
-
-Este documento recoge principios técnicos de diseño orientados a entornos empresariales con requisitos reales de disponibilidad, segregación y gobernanza.
+No es un repositorio divulgativo.
+Es documentación técnica orientada a arquitectura.
 
 ---
 
-## 2. Principios de Diseño
+## Índice de Documentación
 
-### 2.1 Separación estructural
+### Fundamentos de Arquitectura
 
-- Autoridad Raíz (Root CA) permanentemente offline.
-- Autoridades emisoras segmentadas.
-- Separación administrativa estricta.
-- Red diferenciada para servicios PKI críticos.
+- [Modelo de PKI de 2 Niveles](docs/modelo-2-niveles.md)
 
-La PKI no debe depender de la salud del dominio principal.
+### Principios de Diseño
 
----
-
-### 2.2 Modelo de Jerarquía
-
-Modelo base recomendado:
-
-- Root CA offline.
-- Issuing CA online.
-- Integración con HSM cuando el nivel de criticidad lo requiera.
-- Planificación explícita de CRL y OCSP.
-
-La simplicidad estructural es preferible a arquitecturas sobrecomplicadas.
+- Separación estructural
+- Gobierno criptográfico
+- Gestión del ciclo de vida
+- Alineación con Zero Trust
+- Preparación Post-Cuántica
 
 ---
 
-### 2.3 Gobierno Criptográfico
+## Alcance
 
-Una PKI empresarial exige:
+Este repositorio se centra exclusivamente en:
 
-- Políticas de emisión documentadas.
-- Inventario completo de certificados.
-- Gestión formal de revocaciones.
-- Definición de SLAs internos.
-- Revisión periódica de algoritmos y longitudes de clave.
+- Arquitectura técnica.
+- Modelos de jerarquía.
+- Gobernanza criptográfica.
+- Decisiones estructurales.
 
-Sin gobierno, la PKI degenera en emisión descontrolada.
-
----
-
-### 2.4 Gestión del Ciclo de Vida
-
-- Renovación anticipada planificada.
-- Automatización controlada.
-- Monitorización de expiraciones.
-- Procedimientos de contingencia ante revocaciones masivas.
-
-El riesgo operativo en PKI suele estar en el ciclo de vida, no en la criptografía.
-
----
-
-### 2.5 Alineación con Zero Trust
-
-- mTLS bajo control de arquitectura.
-- Certificados no como bypass de políticas.
-- Integración con postura de identidad.
-
-PKI no sustituye identidad.
-La complementa.
-
----
-
-### 2.6 Preparación Post-Cuántica
-
-- Inventario criptográfico previo.
-- Evaluación de algoritmos vulnerables.
-- Estrategia de agilidad criptográfica.
-- Roadmap realista de transición.
-
-No se trata de migrar mañana.
-Se trata de estar preparado.
-
----
-
-## 3. Enfoque
-
-Este repositorio está centrado exclusivamente en arquitectura técnica.
-
-No incluye:
-- Marketing de seguridad.
-- Recomendaciones comerciales.
-- Discursos genéricos.
-
-Su objetivo es documentar patrones de diseño y criterios de decisión en entornos empresariales reales.
+No incluye herramientas comerciales ni guías operativas de producto.
 
 ---
 
