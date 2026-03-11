@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arquitectura PKI Empresarial</title>
+    <meta
+      name="description"
+      content="Guía arquitectónica de PKI empresarial: fundamentos, modelo de 2 niveles y diseño jerárquico para entornos críticos."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="container">
+        <p class="eyebrow">Arquitectura de Confianza</p>
+        <h1>PKI Empresarial sin atajos</h1>
+        <p class="lead">
+          Una PKI no es “una CA instalada”: es un sistema estructural de confianza, gobierno y
+          resiliencia a largo plazo.
+        </p>
+        <div class="cta-row">
+          <a href="#modelos" class="btn btn-primary">Explorar modelos</a>
+          <a href="#principios" class="btn btn-ghost">Ver principios</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="resumen" class="section container">
+        <h2>Qué cambia con este enfoque</h2>
+        <div class="grid cards-3">
+          <article class="card">
+            <h3>De implementación a arquitectura</h3>
+            <p>
+              Se pasa de “instalar una CA” a diseñar un sistema gobernable durante 10–15 años.
+            </p>
+          </article>
+          <article class="card">
+            <h3>De servidor a activo estratégico</h3>
+            <p>
+              La Root CA se trata como ancla crítica de confianza, aislada y con activación formal.
+            </p>
+          </article>
+          <article class="card">
+            <h3>De operación reactiva a ciclo de vida</h3>
+            <p>
+              Emisión, renovación, revocación y contingencia se modelan desde el diseño.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="principios" class="section section-alt">
+        <div class="container">
+          <h2>Principios arquitectónicos fundamentales</h2>
+          <ul class="checklist">
+            <li>Root CA offline, fuera de dominio y con custodia reforzada.</li>
+            <li>Issuing CAs segmentadas y con superficie de ataque mínima.</li>
+            <li>Separación de roles: operación, custodia, infraestructura y auditoría.</li>
+            <li>Gobierno criptográfico explícito (quién, cómo, cuándo y bajo qué controles).</li>
+            <li>Diseño de ciclo de vida: renovación, revocación masiva y respuesta a compromiso.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="modelos" class="section container">
+        <h2>Modelos incluidos</h2>
+        <div class="grid cards-2">
+          <article class="card card-link">
+            <h3>Fundamentos arquitectónicos</h3>
+            <p>
+              Marco base para entender PKI como sistema jerárquico, gobernado y de riesgo
+              acumulativo.
+            </p>
+            <a href="docs/fundamentos-arquitectonicos.md">Abrir documento →</a>
+          </article>
+          <article class="card card-link">
+            <h3>Modelo de PKI de 2 niveles</h3>
+            <p>Topología mínima aceptable: Root offline + Issuing online con publicación controlada.</p>
+            <a href="docs/modelo-2-niveles.md">Abrir documento →</a>
+          </article>
+          <article class="card card-link">
+            <h3>Modelo jerárquico empresarial</h3>
+            <p>
+              Diseño en profundidad para segmentación, CRL/OCSP, escalabilidad y escenarios de
+              compromiso.
+            </p>
+            <a href="docs/modelo-jerarquico-empresarial.md">Abrir documento →</a>
+          </article>
+          <article class="card">
+            <h3>Resultado esperado</h3>
+            <p>
+              Claridad estructural, capacidad de evolución y reducción de deuda criptográfica con el
+              paso del tiempo.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="riesgos" class="section section-alt">
+        <div class="container">
+          <h2>Riesgo acumulativo: radar de deuda</h2>
+          <div class="grid cards-2">
+            <article class="card">
+              <h3>Señales tempranas</h3>
+              <ul>
+                <li>Validez excesiva de certificados.</li>
+                <li>Algoritmos obsoletos por compatibilidad.</li>
+                <li>CRL creciendo sin planificación.</li>
+                <li>Privilegios sobredimensionados en CAs.</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Mitigación estructural</h3>
+              <ul>
+                <li>Políticas de emisión con revisiones periódicas.</li>
+                <li>Inventario y trazabilidad completos.</li>
+                <li>Automatización de renovación y alertado.</li>
+                <li>Playbooks para revocación y compromiso.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <p>Arquitectura PKI Empresarial · claridad, segregación y gobierno.</p>
+        <a href="README.md">Ver README</a>
+      </div>
+    </footer>
+  </body>
+</html>
