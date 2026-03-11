@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arquitectura PKI Empresarial · Diseño, Gobierno y Evolución</title>
+    <meta
+      name="description"
+      content="Marco completo de arquitectura PKI empresarial: fundamentos, modelo de 2 niveles, jerarquía corporativa, riesgos, operación, métricas y hoja de ruta evolutiva."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="container">
+        <p class="eyebrow">Arquitectura de confianza corporativa</p>
+        <h1>PKI Empresarial: profundidad técnica sin perder claridad</h1>
+        <p class="lead">
+          Esta guía consolida fundamentos, modelos y decisiones prácticas para diseñar, operar y
+          evolucionar una PKI empresarial robusta. El objetivo no es “instalar una CA”, sino
+          construir una infraestructura de confianza gobernable durante una década.
+        </p>
+        <div class="cta-row">
+          <a href="#nucleo" class="btn btn-primary">Ver núcleo arquitectónico</a>
+          <a href="#roadmap" class="btn btn-ghost">Revisar hoja de ruta</a>
+          <a href="#documentos" class="btn btn-ghost">Ir a documentos base</a>
+        </div>
+      </div>
+    </header>
+
+    <nav class="subnav">
+      <div class="container subnav-links">
+        <a href="#nucleo">Núcleo</a>
+        <a href="#principios">Principios</a>
+        <a href="#modelos">Modelos</a>
+        <a href="#operacion">Operación</a>
+        <a href="#riesgos">Riesgos</a>
+        <a href="#metricas">Métricas</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </nav>
+
+    <main>
+      <section id="nucleo" class="section container">
+        <h2>Núcleo arquitectónico: qué es y qué no es una PKI</h2>
+        <div class="grid cards-3">
+          <article class="card">
+            <h3>Qué sí es</h3>
+            <ul>
+              <li>Un sistema jerárquico de confianza.</li>
+              <li>Un activo estratégico de largo plazo.</li>
+              <li>Una capacidad transversal de seguridad corporativa.</li>
+              <li>Un marco de gobierno criptográfico auditable.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Qué no es</h3>
+            <ul>
+              <li>Una máquina aislada que emite certificados.</li>
+              <li>Un proyecto puntual que “se cierra” al desplegar.</li>
+              <li>Una pieza subordinada al dominio sin autonomía.</li>
+              <li>Un servicio que puede crecer sin arquitectura.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Resultado de negocio</h3>
+            <ul>
+              <li>Menor riesgo sistémico ante compromiso.</li>
+              <li>Mayor resiliencia en autenticación y cifrado.</li>
+              <li>Escalabilidad para cloud, DevOps e IoT.</li>
+              <li>Preparación para cambios regulatorios y criptográficos.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="principios" class="section section-alt">
+        <div class="container">
+          <h2>Principios que sostienen toda la arquitectura</h2>
+          <div class="grid cards-2">
+            <article class="card">
+              <h3>1) Root CA aislada y controlada</h3>
+              <p>
+                Debe estar offline, fuera del dominio productivo y con activaciones excepcionales
+                bajo procedimiento formal. El diseño asume que la raíz es el ancla de confianza del
+                sistema completo.
+              </p>
+            </article>
+            <article class="card">
+              <h3>2) Issuing CAs segmentadas</h3>
+              <p>
+                Las emisoras están expuestas a operación diaria y por ello requieren segmentación de
+                red, hardening, control de acceso y trazabilidad continua.
+              </p>
+            </article>
+            <article class="card">
+              <h3>3) Separación real de funciones</h3>
+              <p>
+                Infraestructura, custodia de claves, emisión y auditoría deben estar separadas para
+                evitar concentración de privilegios y reducir riesgo interno.
+              </p>
+            </article>
+            <article class="card">
+              <h3>4) Ciclo de vida diseñado desde inicio</h3>
+              <p>
+                Emisión, renovación, revocación y contingencia no son “operación posterior”; son
+                parte del diseño base.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="modelos" class="section container">
+        <h2>Modelos de referencia incluidos en el repositorio</h2>
+        <div class="grid cards-2">
+          <article class="card card-link">
+            <h3>Fundamentos arquitectónicos</h3>
+            <p>
+              Define el marco mental correcto: PKI como sistema jerárquico, gobernado y con riesgo
+              acumulativo.
+            </p>
+            <a href="docs/fundamentos-arquitectonicos.md">Abrir fundamentos →</a>
+          </article>
+          <article class="card card-link">
+            <h3>Modelo de PKI de 2 niveles</h3>
+            <p>
+              Estructura mínima aceptable para contexto empresarial: Root offline + Issuing online
+              + publicación de revocación controlada.
+            </p>
+            <a href="docs/modelo-2-niveles.md">Abrir modelo de 2 niveles →</a>
+          </article>
+          <article class="card card-link">
+            <h3>Modelo jerárquico empresarial</h3>
+            <p>
+              Profundiza en segmentación, CRL/OCSP, escenarios de compromiso, escalabilidad e
+              integración corporativa.
+            </p>
+            <a href="docs/modelo-jerarquico-empresarial.md">Abrir modelo jerárquico →</a>
+          </article>
+          <article class="card">
+            <h3>Cómo usar estos modelos</h3>
+            <p>
+              Comienza por fundamentos, ajusta topología con el modelo de 2 niveles y completa el
+              diseño con el marco jerárquico en función de criticidad y regulación.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="operacion" class="section section-alt">
+        <div class="container">
+          <h2>Operación arquitectónica: controles mínimos recomendados</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Dominio</th>
+                  <th>Control clave</th>
+                  <th>Por qué importa</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Emisión</td>
+                  <td>Plantillas restringidas + aprobación por política</td>
+                  <td>Evita emisión no inventariada y abuso de privilegios.</td>
+                </tr>
+                <tr>
+                  <td>Custodia</td>
+                  <td>Claves en HSM (según criticidad) + backups cifrados</td>
+                  <td>Reduce riesgo de extracción y pérdida irreversible.</td>
+                </tr>
+                <tr>
+                  <td>Revocación</td>
+                  <td>CRL/OCSP con SLO definidos y pruebas periódicas</td>
+                  <td>Minimiza fallos de validación en producción.</td>
+                </tr>
+                <tr>
+                  <td>Auditoría</td>
+                  <td>Registro completo de operaciones y accesos</td>
+                  <td>Permite trazabilidad y respuesta a incidentes.</td>
+                </tr>
+                <tr>
+                  <td>Continuidad</td>
+                  <td>Runbooks de DR y simulacros</td>
+                  <td>Reduce tiempo de recuperación ante eventos críticos.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="riesgos" class="section container">
+        <h2>Riesgo acumulativo: dónde se degrada una PKI con el tiempo</h2>
+        <div class="grid cards-2">
+          <article class="card">
+            <h3>Señales tempranas de deuda criptográfica</h3>
+            <ul>
+              <li>Certificados con validez excesiva y sin gobierno de excepciones.</li>
+              <li>Algoritmos heredados mantenidos indefinidamente.</li>
+              <li>CRL creciendo sin estimación de impacto y latencia.</li>
+              <li>Falta de inventario de dependencias de certificados.</li>
+              <li>Dependencia operativa de una sola persona o equipo.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Mitigación estructural</h3>
+            <ul>
+              <li>Revisiones trimestrales de políticas criptográficas.</li>
+              <li>Cadencia de renovación automatizada y alertado temprano.</li>
+              <li>Clasificación por criticidad para definir controles por tipo.</li>
+              <li>Pruebas de revocación masiva en entornos controlados.</li>
+              <li>Plan formal de transición criptográfica y compatibilidad.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="metricas" class="section section-alt">
+        <div class="container">
+          <h2>Métricas para gobernar la PKI (no solo operarla)</h2>
+          <div class="grid cards-3">
+            <article class="card">
+              <h3>Salud operativa</h3>
+              <p>Disponibilidad CRL/OCSP, tiempo de emisión, tiempo de revocación, errores de validación.</p>
+            </article>
+            <article class="card">
+              <h3>Riesgo y cumplimiento</h3>
+              <p>Porcentaje de claves protegidas en HSM, desviaciones de política, hallazgos de auditoría.</p>
+            </article>
+            <article class="card">
+              <h3>Evolución</h3>
+              <p>Servicios migrados a automatización, cobertura de inventario, avance de transición criptográfica.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="roadmap" class="section container">
+        <h2>Hoja de ruta sugerida (12 meses)</h2>
+        <ol class="timeline">
+          <li>
+            <strong>Meses 1–2:</strong> inventario de certificados, clasificación por criticidad y baseline
+            de riesgos.
+          </li>
+          <li>
+            <strong>Meses 3–4:</strong> endurecimiento de CA emisora, revisión de plantillas y separación de
+            roles.
+          </li>
+          <li>
+            <strong>Meses 5–6:</strong> diseño/ajuste de CRL y OCSP con objetivos de disponibilidad y prueba de
+            carga.
+          </li>
+          <li>
+            <strong>Meses 7–9:</strong> automatización de renovaciones y estandarización de runbooks de
+            incidentes.
+          </li>
+          <li>
+            <strong>Meses 10–12:</strong> simulacro de compromiso, revisión integral y plan de evolución
+            criptográfica.
+          </li>
+        </ol>
+      </section>
+
+      <section id="faq" class="section section-alt">
+        <div class="container">
+          <h2>Preguntas frecuentes</h2>
+          <div class="grid cards-2">
+            <article class="card">
+              <h3>¿Cuándo usar HSM obligatoriamente?</h3>
+              <p>
+                Cuando la PKI soporta servicios regulados o de alta criticidad (financiero,
+                industrial, identidad corporativa a gran escala), tanto por reducción de superficie
+                de ataque como por requisitos de auditoría.
+              </p>
+            </article>
+            <article class="card">
+              <h3>¿Es suficiente una sola CA?</h3>
+              <p>
+                Para entorno empresarial, no es recomendable: mezcla ancla de confianza con
+                operación diaria y amplifica el impacto ante compromiso.
+              </p>
+            </article>
+            <article class="card">
+              <h3>¿CRL o OCSP?</h3>
+              <p>
+                No es una decisión binaria. CRL es base obligatoria; OCSP aporta dinamismo cuando la
+                escala y la latencia lo demandan, asumiendo su complejidad operativa.
+              </p>
+            </article>
+            <article class="card" id="documentos">
+              <h3>¿Dónde ampliar?</h3>
+              <p>
+                En los documentos técnicos del repositorio: fundamentos, modelo de 2 niveles y
+                jerárquico empresarial.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <p>Arquitectura PKI Empresarial · claridad estructural, segregación formal y gobierno continuo.</p>
+        <a href="README.md">Ver README</a>
+      </div>
+    </footer>
+  </body>
+</html>
