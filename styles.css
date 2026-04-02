@@ -1,3 +1,19 @@
+/* ─────────────────────────────────────────────────────────────────
+   Brand Tokens — Salva Navarro / PKI Tools
+   Fuente: https://salva-navarro.github.io/brand-kit/
+   ───────────────────────────────────────────────────────────────── */
+:root {
+  --brand-primary:         #2F4F9F;
+  --brand-primary-tint:    #4B70C9;
+  --brand-primary-shade:   #1E3470;
+  --brand-secondary:       #D4A017;
+  --brand-secondary-tint:  #E8BC45;
+  --brand-secondary-shade: #A07C10;
+  --brand-dark:            #1C1C1C;
+  --brand-light:           #FFFFFF;
+  --brand-cdn:             'https://salva-navarro.github.io/brand-kit';
+}
+
 :root {
   --bg: #0b1020;
   --bg-soft: #121a33;
