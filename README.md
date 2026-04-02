@@ -1,22 +1,28 @@
 # Arquitectura PKI Empresarial
 
-Sitio reconstruido con una estructura más clara, visual y navegable, manteniendo la esencia técnica del contenido original:
+Repositorio técnico en español orientado a diseño, gobierno y evolución de infraestructuras PKI en entornos enterprise.
 
-- PKI como infraestructura estructural de confianza.
-- Diseño jerárquico (Root offline + Issuing online).
-- Gobernanza criptográfica y separación de roles.
-- Gestión de riesgo acumulativo y ciclo de vida.
-- Escalabilidad y evolución a largo plazo.
+## Objetivo
 
-## Contenido
+Convertir principios de seguridad y confianza en decisiones de arquitectura aplicables:
 
-- Fundamentos: [`docs/fundamentos-arquitectonicos.md`](docs/fundamentos-arquitectonicos.md)
-- Modelo de 2 niveles: [`docs/modelo-2-niveles.md`](docs/modelo-2-niveles.md)
-- Modelo jerárquico empresarial: [`docs/modelo-jerarquico-empresarial.md`](docs/modelo-jerarquico-empresarial.md)
+- segmentación de dominios de confianza,
+- hardening de jerarquías CA,
+- gobierno criptográfico operativo,
+- resiliencia, continuidad y auditabilidad.
 
-## Sitio
+## Índice de Contenidos
 
-- Página principal: [`index.html`](index.html)
-- Estilos: [`styles.css`](styles.css)
+- Fundamentos arquitectónicos: [docs/fundamentos-arquitectonicos.md](docs/fundamentos-arquitectonicos.md)
+- Modelo de 2 niveles: [docs/modelo-2-niveles.md](docs/modelo-2-niveles.md)
+- Modelo jerárquico empresarial: [docs/modelo-jerarquico-empresarial.md](docs/modelo-jerarquico-empresarial.md)
 
-Sitio oficial: https://salva-navarro.github.io
+## Relación con el Portfolio
+
+- Sitio profesional y demos: https://salva-navarro.github.io
+- Principles (EN): https://github.com/salva-navarro/enterprise-pki-architecture-principles
+- Índice global de repos: https://github.com/salva-navarro/Tools-Hub
+
+## Enfoque editorial
+
+Rigor técnico, foco en implementación y criterios de decisión arquitectónica sostenibles a largo plazo.
