@@ -16,6 +16,8 @@ Convertir principios de seguridad y confianza en decisiones de arquitectura apli
 - Fundamentos arquitectónicos: [docs/fundamentos-arquitectonicos.md](docs/fundamentos-arquitectonicos.md)
 - Modelo de 2 niveles: [docs/modelo-2-niveles.md](docs/modelo-2-niveles.md)
 - Modelo jerárquico empresarial: [docs/modelo-jerarquico-empresarial.md](docs/modelo-jerarquico-empresarial.md)
+- Modelo operativo PKI: [docs/operacion/modelo-operativo-pki.md](docs/operacion/modelo-operativo-pki.md)
+- Roadmap PKI 6 meses: [docs/operacion/roadmap-6-meses.md](docs/operacion/roadmap-6-meses.md)
 
 ## Relación con el Portfolio
 
